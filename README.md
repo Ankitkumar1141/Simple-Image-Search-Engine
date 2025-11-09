@@ -13,6 +13,7 @@
 - GPUs are not required.
 - Tested on Ubuntu 18.04 and WSL2 (Ubuntu 20.04)
 
+## Link
 - [Demo](https://www.simple-image-search.xyz/)
 
 
