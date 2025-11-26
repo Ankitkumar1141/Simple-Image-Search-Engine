@@ -1,6 +1,55 @@
 <!doctype html>
 <html>
-    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            body {
+                background: #f4f4f4;
+                padding-top: 30px;
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                text-align: center;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+            .container {
+                background: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            form input[type="file"] {
+                margin-bottom: 15px;
+            }
+            form input[type="submit"] {
+                background: #337ab7;
+                color: #fff;
+                padding: 8px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            form input[type="submit"]:hover {
+                background: #23527c;
+            }
+            h2 {
+                margin-top: 30px;
+                font-weight: 600;
+            }
+            figure {
+                float: left;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            figcaption {
+                margin-top: 5px;
+                color: #555;
+                font-size: 14px;
+            }
+        </style>
+    </head>
     <body>
         <div class="container">
             <h1>Search by Image</h1>
@@ -14,7 +63,7 @@
             {% endif %}
             <h2>Results:</h2>
             {% for score in scores %}
-            <figure style="float: left; margin-right: 20px; margin-bottom: 20px;">
+            <figure>
                 <img src="{{ score[1] }}" height="200px">
                 <figcaption>{{ score[0] }}</figcaption>
             </figure>
@@ -22,5 +71,6 @@
         </div>
     </body>
 </html>
+
 
 
